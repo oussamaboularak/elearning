@@ -14,6 +14,13 @@ Gradient btnColor = LinearGradient(
   colors: [Color(0xff8bffc7), Color(0xfff1c251)],
 );
 
+const List<String> list = <String>[
+  'none',
+  'Only Phone Number',
+  'All',
+  'Only Email'
+];
+
 class _SignupState extends State<Signup> {
   @override
   Widget build(BuildContext context) {
@@ -29,7 +36,16 @@ class _SignupState extends State<Signup> {
                   child: Container(
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(30),
-                      color: Colors.blue, // Set the background color to blue
+                      color: Colors.white, // Set the background color to blue
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.grey, // Shadow color
+                          offset:
+                              Offset(0, 3), // Specify the offset of the shadow
+                          blurRadius: 6, // Adjust the blur radius as needed
+                          spreadRadius: 2, // Adjust the spread radius as needed
+                        ),
+                      ],
                     ),
                     child: Padding(
                       padding: const EdgeInsets.all(20.0),
@@ -40,8 +56,6 @@ class _SignupState extends State<Signup> {
                               style: TextStyle(
                                 fontSize: 26,
                                 fontWeight: FontWeight.w700,
-                                color:
-                                    Colors.white, // Set the text color to white
                               )),
 
                           // Email Field
@@ -65,20 +79,6 @@ class _SignupState extends State<Signup> {
                           ),
                           SizedBox(height: 10),
 
-                          // // Location Dropdown
-                          // DropdownButton(
-                          //   items: [
-                          //     DropdownMenuItem(child: Text('Location 1')),
-                          //     DropdownMenuItem(child: Text('Location 2')),
-                          //     // Add more locations as needed
-                          //   ],
-                          //   onChanged: (value) {
-                          //     // Handle location selection
-                          //   },
-                          // ),
-
-                          SizedBox(height: 10),
-
                           // Password Field
                           TextField(
                             obscureText: true,
@@ -89,6 +89,10 @@ class _SignupState extends State<Signup> {
                             ),
                           ),
                           SizedBox(height: 20),
+
+                          DropdownMenuExample(),
+
+                          SizedBox(height: 10),
 
                           // Sign Up Button
                           Container(
@@ -139,6 +143,33 @@ class _SignupState extends State<Signup> {
           ],
         ),
       ),
+    );
+  }
+}
+
+class DropdownMenuExample extends StatefulWidget {
+  const DropdownMenuExample({super.key});
+
+  @override
+  State<DropdownMenuExample> createState() => _DropdownMenuExampleState();
+}
+
+class _DropdownMenuExampleState extends State<DropdownMenuExample> {
+  String dropdownValue = "hello";
+
+  @override
+  Widget build(BuildContext context) {
+    return DropdownMenu<String>(
+      initialSelection: "Show you contact ",
+      onSelected: (String? value) {
+        // This is called when the user selects an item.
+        setState(() {
+          dropdownValue = value!;
+        });
+      },
+      dropdownMenuEntries: list.map<DropdownMenuEntry<String>>((String value) {
+        return DropdownMenuEntry<String>(value: value, label: value);
+      }).toList(),
     );
   }
 }

@@ -28,86 +28,91 @@ class _LoginPageState extends State<LoginPage> {
                   flex: 4,
                   child: Container(
                     decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(30),
-                        color: Colors.white70),
-                    child: Card(
-                      //   color: Colors.white,
-                      elevation: 8,
-                      shadowColor: Colors.grey, // Add a shadow color
-                      child: Padding(
-                        padding: const EdgeInsets.all(20.0),
-                        child: Column(
-                          mainAxisSize: MainAxisSize.min,
-                          children: [
-                            Text("Find Online & Offline Job Opportunity",
-                                style: TextStyle(
-                                  fontSize: 40,
-                                  fontWeight: FontWeight.w700,
-                                )),
-                            Text(
-                                "Get special opportunity and get more than 10,000 AED/Month",
-                                style: TextStyle(
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w700,
-                                )),
-                            // Email Field
-                            TextField(
-                              decoration: InputDecoration(
-                                hintText: 'Enter email',
-                                labelText: 'Email',
-                                border: OutlineInputBorder(),
-                              ),
-                            ),
-                            SizedBox(height: 10),
-
-                            // Password Field
-                            TextField(
-                              obscureText: true,
-                              decoration: InputDecoration(
-                                hintText: 'Enter password',
-                                labelText: 'Password',
-                                border: OutlineInputBorder(),
-                              ),
-                            ),
-                            SizedBox(height: 20),
-
-                            // Login Button
-                            Container(
-                              width: double.infinity,
-                              height: 40,
-                              decoration: BoxDecoration(
-                                gradient: btnColor,
-                                borderRadius: BorderRadius.circular(15),
-                              ),
-                              child: ElevatedButton(
-                                onPressed: () => print("it's pressed"),
-                                style: ElevatedButton.styleFrom(
-                                  primary: Colors.transparent,
-                                  onPrimary: Colors.white,
-                                  shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(15),
-                                  ),
-                                ),
-                                child: Center(child: Text("Sign In")),
-                              ),
-                            ),
-
-                            SizedBox(height: 20),
-
-                            Text('Or continue with'),
-
-                            SizedBox(height: 20),
-
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                _loginWithButton(image: 'images/google.png'),
-                                SizedBox(width: 20),
-                                _loginWithButton(image: 'images/facebook.png'),
-                              ],
-                            ),
-                          ],
+                      borderRadius: BorderRadius.circular(30),
+                      color: Colors.white, // Set the background color to blue
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.grey, // Shadow color
+                          offset:
+                              Offset(0, 3), // Specify the offset of the shadow
+                          blurRadius: 6, // Adjust the blur radius as needed
+                          spreadRadius: 2, // Adjust the spread radius as needed
                         ),
+                      ],
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.all(20.0),
+                      child: Column(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          Text("Find Online & Offline Job Opportunity",
+                              style: TextStyle(
+                                fontSize: 40,
+                                fontWeight: FontWeight.w700,
+                              )),
+                          Text(
+                              "Get special opportunity and get more than 10,000 AED/Month",
+                              style: TextStyle(
+                                fontSize: 14,
+                                fontWeight: FontWeight.w700,
+                              )),
+                          // Email Field
+                          TextField(
+                            decoration: InputDecoration(
+                              hintText: 'Enter email',
+                              labelText: 'Email',
+                              border: OutlineInputBorder(),
+                            ),
+                          ),
+                          SizedBox(height: 10),
+
+                          // Password Field
+                          TextField(
+                            obscureText: true,
+                            decoration: InputDecoration(
+                              hintText: 'Enter password',
+                              labelText: 'Password',
+                              border: OutlineInputBorder(),
+                            ),
+                          ),
+                          SizedBox(height: 20),
+
+                          // Login Button
+                          Container(
+                            width: double.infinity,
+                            height: 40,
+                            decoration: BoxDecoration(
+                              gradient: btnColor,
+                              borderRadius: BorderRadius.circular(15),
+                            ),
+                            child: ElevatedButton(
+                              onPressed: () => print("it's pressed"),
+                              style: ElevatedButton.styleFrom(
+                                primary: Colors.transparent,
+                                onPrimary: Colors.white,
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(15),
+                                ),
+                              ),
+                              child: Center(child: Text("Sign In")),
+                            ),
+                          ),
+
+                          SizedBox(height: 20),
+
+                          Text('Or continue with'),
+
+                          SizedBox(height: 20),
+
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              _loginWithButton(image: 'images/google.png'),
+                              SizedBox(width: 20),
+                              _loginWithButton(image: 'images/facebook.png'),
+                            ],
+                          ),
+                        ],
                       ),
                     ),
                   ),
