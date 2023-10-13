@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:innotech/screens/signup.dart';
 import 'package:innotech/widget/navbar.dart';
 
 class LoginPage extends StatefulWidget {
@@ -99,8 +100,20 @@ class _LoginPageState extends State<LoginPage> {
                           ),
 
                           SizedBox(height: 20),
-
-                          Text('Or continue with'),
+                          GestureDetector(
+                            onTap: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => SignUpPage()));
+                            },
+                            child: Text('SignUp',
+                                style: TextStyle(
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.w700,
+                                  color: Colors.amber,
+                                )),
+                          ),
 
                           SizedBox(height: 20),
 
@@ -143,7 +156,7 @@ class _LoginPageState extends State<LoginPage> {
   Widget _loginWithButton({required String image, bool isActive = false}) {
     return Container(
       width: 90,
-      height: 70,
+      height: 40,
       decoration: isActive
           ? BoxDecoration(
               color: Colors.white,
