@@ -1,18 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:innotech/widget/navbar.dart';
 
-class Signup extends StatefulWidget {
-  const Signup({super.key});
+import '../widget/constants.dart';
+
+class SignUpPage extends StatefulWidget {
+  const SignUpPage({super.key});
 
   @override
-  State<Signup> createState() => _SignupState();
+  State<SignUpPage> createState() => _SignUpPageState();
 }
 
-Gradient btnColor = LinearGradient(
-  begin: Alignment.centerLeft,
-  end: Alignment.centerRight,
-  colors: [Color(0xff8bffc7), Color(0xfff1c251)],
-);
+String dropdownValue = "hello";
 
 const List<String> list = <String>[
   'none',
@@ -21,7 +19,13 @@ const List<String> list = <String>[
   'Only Email'
 ];
 
-class _SignupState extends State<Signup> {
+const List<String> category = <String>[
+  'person',
+  'teacher',
+  'institu',
+];
+
+class _SignUpPageState extends State<SignUpPage> {
   @override
   Widget build(BuildContext context) {
     return Material(
@@ -57,7 +61,34 @@ class _SignupState extends State<Signup> {
                                 fontSize: 26,
                                 fontWeight: FontWeight.w700,
                               )),
+                          SizedBox(height: 10),
 
+                          DropdownMenu<String>(
+                            initialSelection: "Show you contact ",
+                            onSelected: (String? value) {
+                              // This is called when the user selects an item.
+                              setState(() {
+                                dropdownValue = value!;
+                              });
+                            },
+                            dropdownMenuEntries: category
+                                .map<DropdownMenuEntry<String>>((String value) {
+                              return DropdownMenuEntry<String>(
+                                  value: value, label: value);
+                            }).toList(),
+                          ),
+                          SizedBox(height: 20),
+
+                          // Username Field
+                          TextField(
+                            decoration: InputDecoration(
+                              hintText:
+                                  'Enter username', // Add a hint for the username
+                              labelText: 'Username',
+                              border: OutlineInputBorder(),
+                            ),
+                          ),
+                          SizedBox(height: 10),
                           // Email Field
                           TextField(
                             decoration: InputDecoration(
@@ -71,9 +102,8 @@ class _SignupState extends State<Signup> {
                           // Username Field
                           TextField(
                             decoration: InputDecoration(
-                              hintText:
-                                  'Enter username', // Add a hint for the username
-                              labelText: 'Username',
+                              hintText: 'Mobile', // Add a hint for !
+                              labelText: 'Mobile',
                               border: OutlineInputBorder(),
                             ),
                           ),
@@ -90,8 +120,20 @@ class _SignupState extends State<Signup> {
                           ),
                           SizedBox(height: 20),
 
-                          DropdownMenuExample(),
-
+                          DropdownMenu<String>(
+                            initialSelection: "Show you contact ",
+                            onSelected: (String? value) {
+                              // This is called when the user selects an item.
+                              setState(() {
+                                dropdownValue = value!;
+                              });
+                            },
+                            dropdownMenuEntries: list
+                                .map<DropdownMenuEntry<String>>((String value) {
+                              return DropdownMenuEntry<String>(
+                                  value: value, label: value);
+                            }).toList(),
+                          ),
                           SizedBox(height: 10),
 
                           // Sign Up Button
@@ -116,8 +158,6 @@ class _SignupState extends State<Signup> {
                           ),
 
                           SizedBox(height: 20),
-
-                          Text('Or continue with'),
                         ],
                       ),
                     ),
@@ -143,33 +183,6 @@ class _SignupState extends State<Signup> {
           ],
         ),
       ),
-    );
-  }
-}
-
-class DropdownMenuExample extends StatefulWidget {
-  const DropdownMenuExample({super.key});
-
-  @override
-  State<DropdownMenuExample> createState() => _DropdownMenuExampleState();
-}
-
-class _DropdownMenuExampleState extends State<DropdownMenuExample> {
-  String dropdownValue = "hello";
-
-  @override
-  Widget build(BuildContext context) {
-    return DropdownMenu<String>(
-      initialSelection: "Show you contact ",
-      onSelected: (String? value) {
-        // This is called when the user selects an item.
-        setState(() {
-          dropdownValue = value!;
-        });
-      },
-      dropdownMenuEntries: list.map<DropdownMenuEntry<String>>((String value) {
-        return DropdownMenuEntry<String>(value: value, label: value);
-      }).toList(),
     );
   }
 }
