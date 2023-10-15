@@ -20,7 +20,7 @@ class _Quize2State extends State<Quize2> {
       child: SingleChildScrollView(
         child: Column(
           children: [
-            Navbar(),
+            const Navbar(),
             Stack(
               children: [
                 Visibility(
@@ -35,14 +35,14 @@ class _Quize2State extends State<Quize2> {
                   ),
                 ),
                 Container(
-                  width: 620,
+                  width: 720,
                   alignment: Alignment.topLeft,
                   child: Padding(
                     padding: const EdgeInsets.all(20.0),
                     child: Column(
                       mainAxisSize: MainAxisSize.min,
                       children: [
-                        Text(
+                        const Text(
                           'The courses are for ?',
                           style: TextStyle(
                             color: Colors.black,
@@ -265,7 +265,7 @@ class _Quize2State extends State<Quize2> {
                                         context,
                                         MaterialPageRoute(
                                           builder: (BuildContext context) =>
-                                              Quize3(),
+                                              const Quize3(),
                                         ),
                                       );
                                       print('Next clicked!');

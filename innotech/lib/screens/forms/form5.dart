@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:innotech/screens/forms/form6.dart';
 import 'package:innotech/widget/navbar.dart';
 
 import '../../widget/HoverContainer2.dart';
@@ -20,7 +21,7 @@ class _Quize5State extends State<Quize5> {
       child: SingleChildScrollView(
         child: Column(
           children: [
-            Navbar(),
+            const Navbar(),
             Stack(
               children: [
                 Visibility(
@@ -42,7 +43,7 @@ class _Quize5State extends State<Quize5> {
                     child: Column(
                       mainAxisSize: MainAxisSize.min,
                       children: [
-                        Text(
+                        const Text(
                           'Sigment needed',
                           style: TextStyle(
                             color: Colors.black,
@@ -51,7 +52,7 @@ class _Quize5State extends State<Quize5> {
                             fontWeight: FontWeight.w700,
                           ),
                         ),
-                        SizedBox(height: 20),
+                        const SizedBox(height: 20),
 
                         Center(
                           child: Column(
@@ -533,7 +534,7 @@ class _Quize5State extends State<Quize5> {
                                         context,
                                         MaterialPageRoute(
                                           builder: (BuildContext context) =>
-                                              Quize2(),
+                                              const Quize6(),
                                         ),
                                       );
                                       print('Next clicked!');

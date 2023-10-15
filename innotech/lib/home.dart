@@ -17,7 +17,7 @@ class _HomePageState extends State<HomePage> {
       child: SingleChildScrollView(
         child: Column(
           children: [
-            Navbar(),
+            const Navbar(),
             Stack(
               children: [
                 Visibility(
@@ -39,7 +39,7 @@ class _HomePageState extends State<HomePage> {
                     child: Column(
                       mainAxisSize: MainAxisSize.min,
                       children: [
-                        Text(
+                        const Text(
                           "Find online teachers & home tutors for free",
                           style: TextStyle(
                             fontSize: 64,
@@ -48,7 +48,7 @@ class _HomePageState extends State<HomePage> {
                           ),
                         ),
 
-                        SizedBox(height: 20),
+                        const SizedBox(height: 20),
 
                         // Button
                         Container(
@@ -63,22 +63,21 @@ class _HomePageState extends State<HomePage> {
                               Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                  builder: (context) => Quize1(),
+                                  builder: (context) => const Quize1(),
                                 ),
                               );
                             },
                             style: ElevatedButton.styleFrom(
-                              primary: Colors.transparent,
-                              onPrimary: Colors.white,
+                              foregroundColor: Colors.white, backgroundColor: Colors.transparent,
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(40),
                               ),
                             ),
-                            child: Center(child: Text("Get Started")),
+                            child: const Center(child: Text("Get Started")),
                           ),
                         ),
-                        SizedBox(height: 20),
-                        Row(
+                        const SizedBox(height: 20),
+                        const Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Text("Online Classes"),

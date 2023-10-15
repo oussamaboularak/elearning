@@ -9,7 +9,7 @@ class LoginPage extends StatefulWidget {
   State<LoginPage> createState() => _LoginPageState();
 }
 
-Gradient btnColor = LinearGradient(
+Gradient btnColor = const LinearGradient(
   begin: Alignment.centerLeft,
   end: Alignment.centerRight,
   colors: [Color(0xff8bffc7), Color(0xfff1c251)],
@@ -22,7 +22,7 @@ class _LoginPageState extends State<LoginPage> {
       child: SingleChildScrollView(
         child: Column(
           children: [
-            Navbar(),
+            const Navbar(),
             Row(
               children: [
                 Expanded(
@@ -31,7 +31,7 @@ class _LoginPageState extends State<LoginPage> {
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(30),
                       color: Colors.white, // Set the background color to blue
-                      boxShadow: [
+                      boxShadow: const [
                         BoxShadow(
                           color: Colors.grey, // Shadow color
                           offset:
@@ -46,29 +46,29 @@ class _LoginPageState extends State<LoginPage> {
                       child: Column(
                         mainAxisSize: MainAxisSize.min,
                         children: [
-                          Text("Find Online & Offline Job Opportunity",
+                          const Text("Find Online & Offline Job Opportunity",
                               style: TextStyle(
                                 fontSize: 40,
                                 fontWeight: FontWeight.w700,
                               )),
-                          Text(
+                          const Text(
                               "Get special opportunity and get more than 10,000 AED/Month",
                               style: TextStyle(
                                 fontSize: 14,
                                 fontWeight: FontWeight.w700,
                               )),
                           // Email Field
-                          TextField(
+                          const TextField(
                             decoration: InputDecoration(
                               hintText: 'Enter email',
                               labelText: 'Email',
                               border: OutlineInputBorder(),
                             ),
                           ),
-                          SizedBox(height: 10),
+                          const SizedBox(height: 10),
 
                           // Password Field
-                          TextField(
+                          const TextField(
                             obscureText: true,
                             decoration: InputDecoration(
                               hintText: 'Enter password',
@@ -76,7 +76,7 @@ class _LoginPageState extends State<LoginPage> {
                               border: OutlineInputBorder(),
                             ),
                           ),
-                          SizedBox(height: 20),
+                          const SizedBox(height: 20),
 
                           // Login Button
                           Container(
@@ -89,25 +89,24 @@ class _LoginPageState extends State<LoginPage> {
                             child: ElevatedButton(
                               onPressed: () => print("it's pressed"),
                               style: ElevatedButton.styleFrom(
-                                primary: Colors.transparent,
-                                onPrimary: Colors.white,
+                                foregroundColor: Colors.white, backgroundColor: Colors.transparent,
                                 shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(15),
                                 ),
                               ),
-                              child: Center(child: Text("Sign In")),
+                              child: const Center(child: Text("Sign In")),
                             ),
                           ),
 
-                          SizedBox(height: 20),
+                          const SizedBox(height: 20),
                           GestureDetector(
                             onTap: () {
                               Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) => SignUpPage()));
+                                      builder: (context) => const SignUpPage()));
                             },
-                            child: Text('SignUp',
+                            child: const Text('SignUp',
                                 style: TextStyle(
                                   fontSize: 14,
                                   fontWeight: FontWeight.w700,
@@ -115,13 +114,13 @@ class _LoginPageState extends State<LoginPage> {
                                 )),
                           ),
 
-                          SizedBox(height: 20),
+                          const SizedBox(height: 20),
 
                           Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               _loginWithButton(image: 'images/google.png'),
-                              SizedBox(width: 20),
+                              const SizedBox(width: 20),
                               _loginWithButton(image: 'images/facebook.png'),
                             ],
                           ),

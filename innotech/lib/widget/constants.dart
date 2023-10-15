@@ -34,18 +34,16 @@ const TextStyle buttonTextStyle = TextStyle(
 
 // Button Styles
 final ButtonStyle primaryButtonStyle = ElevatedButton.styleFrom(
-  primary: primaryColor,
-  onPrimary: Colors.white,
-  padding: EdgeInsets.symmetric(vertical: 16, horizontal: 24),
+  foregroundColor: Colors.white, backgroundColor: primaryColor,
+  padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 24),
   shape: RoundedRectangleBorder(
     borderRadius: BorderRadius.circular(8),
   ),
 );
 
 final ButtonStyle secondaryButtonStyle = ElevatedButton.styleFrom(
-  primary: secondaryColor,
-  onPrimary: Colors.white,
-  padding: EdgeInsets.symmetric(vertical: 16, horizontal: 24),
+  foregroundColor: Colors.white, backgroundColor: secondaryColor,
+  padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 24),
   shape: RoundedRectangleBorder(
     borderRadius: BorderRadius.circular(8),
   ),

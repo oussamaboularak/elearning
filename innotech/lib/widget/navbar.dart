@@ -4,6 +4,8 @@ import 'package:innotech/home.dart';
 import 'package:innotech/screens/signup.dart';
 
 class Navbar extends StatelessWidget {
+  const Navbar({super.key});
+
   @override
   Widget build(BuildContext context) {
     return LayoutBuilder(
@@ -31,7 +33,7 @@ class Navbar extends StatelessWidget {
                       onTap: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => HomePage()),
+                          MaterialPageRoute(builder: (context) => const HomePage()),
                         );
                       },
                       child: Padding(
@@ -108,7 +110,7 @@ class Navbar extends StatelessWidget {
                             borderRadius: BorderRadius.circular(8.0),
                           ),
                           padding:
-                              EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                              const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
                           child: Text(
                             "Find Students",
                             style: TextStyle(
@@ -132,7 +134,7 @@ class Navbar extends StatelessWidget {
                             borderRadius: BorderRadius.circular(8.0),
                           ),
                           padding:
-                              EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                              const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
                           child: Text(
                             "Share & Get Points",
                             style: TextStyle(
@@ -149,7 +151,7 @@ class Navbar extends StatelessWidget {
                         // Navigate to another screen when clicked
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => LoginPage()),
+                          MaterialPageRoute(builder: (context) => const LoginPage()),
                         );
                       },
                       child: Padding(
@@ -168,52 +170,52 @@ class Navbar extends StatelessWidget {
                       itemBuilder: (context) {
                         return [
                           PopupMenuItem(
-                            child: Text("Find Tutors"),
+                            child: const Text("Find Tutors"),
                             onTap: () {
                               Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => HomePage()),
+                                    builder: (context) => const HomePage()),
                               );
                             },
                           ),
                           PopupMenuItem(
-                            child: Text("Hire a Tutor"),
+                            child: const Text("Hire a Tutor"),
                             onTap: () {
                               // Handle 'About' tap
                             },
                           ),
                           PopupMenuItem(
-                            child: Text("Become Tutor"),
+                            child: const Text("Become Tutor"),
                             onTap: () {
                               // Handle 'Login' tap
                             },
                           ),
                           PopupMenuItem(
-                            child: Text("Find Students"),
+                            child: const Text("Find Students"),
                             onTap: () {
                               // Handle 'Share' tap
                             },
                           ),
                           PopupMenuItem(
-                            child: Text("Share & Get Points"),
+                            child: const Text("Share & Get Points"),
                             onTap: () {
                               // Handle 'Share' tap
                             },
                           ),
                           PopupMenuItem(
-                            child: Text("Login"),
+                            child: const Text("Login"),
                             onTap: () {
                               Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => LoginPage()),
+                                    builder: (context) => const LoginPage()),
                               );
                             },
                           ),
                         ];
                       },
-                      icon: Icon(Icons.menu),
+                      icon: const Icon(Icons.menu),
                     ),
                 ],
               ),

@@ -32,7 +32,7 @@ class _SignUpPageState extends State<SignUpPage> {
       child: SingleChildScrollView(
         child: Column(
           children: [
-            Navbar(),
+            const Navbar(),
             Row(
               children: [
                 Expanded(
@@ -41,7 +41,7 @@ class _SignUpPageState extends State<SignUpPage> {
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(30),
                       color: Colors.white, // Set the background color to blue
-                      boxShadow: [
+                      boxShadow: const [
                         BoxShadow(
                           color: Colors.grey, // Shadow color
                           offset:
@@ -56,12 +56,12 @@ class _SignUpPageState extends State<SignUpPage> {
                       child: Column(
                         mainAxisSize: MainAxisSize.min,
                         children: [
-                          Text("Sign Up with US ",
+                          const Text("Sign Up with US ",
                               style: TextStyle(
                                 fontSize: 26,
                                 fontWeight: FontWeight.w700,
                               )),
-                          SizedBox(height: 10),
+                          const SizedBox(height: 10),
 
                           DropdownMenu<String>(
                             initialSelection: "Show you contact ",
@@ -77,10 +77,10 @@ class _SignUpPageState extends State<SignUpPage> {
                                   value: value, label: value);
                             }).toList(),
                           ),
-                          SizedBox(height: 20),
+                          const SizedBox(height: 20),
 
                           // Username Field
-                          TextField(
+                          const TextField(
                             decoration: InputDecoration(
                               hintText:
                                   'Enter username', // Add a hint for the username
@@ -88,29 +88,29 @@ class _SignUpPageState extends State<SignUpPage> {
                               border: OutlineInputBorder(),
                             ),
                           ),
-                          SizedBox(height: 10),
+                          const SizedBox(height: 10),
                           // Email Field
-                          TextField(
+                          const TextField(
                             decoration: InputDecoration(
                               hintText: 'Enter email',
                               labelText: 'Email',
                               border: OutlineInputBorder(),
                             ),
                           ),
-                          SizedBox(height: 10),
+                          const SizedBox(height: 10),
 
                           // Username Field
-                          TextField(
+                          const TextField(
                             decoration: InputDecoration(
                               hintText: 'Mobile', // Add a hint for !
                               labelText: 'Mobile',
                               border: OutlineInputBorder(),
                             ),
                           ),
-                          SizedBox(height: 10),
+                          const SizedBox(height: 10),
 
                           // Password Field
-                          TextField(
+                          const TextField(
                             obscureText: true,
                             decoration: InputDecoration(
                               hintText: 'Enter password',
@@ -118,7 +118,7 @@ class _SignUpPageState extends State<SignUpPage> {
                               border: OutlineInputBorder(),
                             ),
                           ),
-                          SizedBox(height: 20),
+                          const SizedBox(height: 20),
 
                           DropdownMenu<String>(
                             initialSelection: "Show you contact ",
@@ -134,7 +134,7 @@ class _SignUpPageState extends State<SignUpPage> {
                                   value: value, label: value);
                             }).toList(),
                           ),
-                          SizedBox(height: 10),
+                          const SizedBox(height: 10),
 
                           // Sign Up Button
                           Container(
@@ -147,17 +147,16 @@ class _SignUpPageState extends State<SignUpPage> {
                             child: ElevatedButton(
                               onPressed: () => print("Sign Up button pressed"),
                               style: ElevatedButton.styleFrom(
-                                primary: Colors.transparent,
-                                onPrimary: Colors.white,
+                                foregroundColor: Colors.white, backgroundColor: Colors.transparent,
                                 shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(15),
                                 ),
                               ),
-                              child: Center(child: Text("Sign Up")),
+                              child: const Center(child: Text("Sign Up")),
                             ),
                           ),
 
-                          SizedBox(height: 20),
+                          const SizedBox(height: 20),
                         ],
                       ),
                     ),

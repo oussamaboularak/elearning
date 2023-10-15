@@ -3,24 +3,28 @@ import 'package:innotech/screens/loginpage.dart';
 import 'package:innotech/home.dart';
 
 class Later extends StatelessWidget {
+  const Later({super.key});
+
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      title: Text("Your App Name"),
+      title: const Text("Your App Name"),
       actions: [
         IconButton(
-          icon: Icon(Icons.person), // Replace with your user icon
+          icon: const Icon(Icons.person), // Replace with your user icon
           onPressed: () {
             // Handle user profile action
           },
         ),
-        ResponsiveNavBar(),
+        const ResponsiveNavBar(),
       ],
     );
   }
 }
 
 class ResponsiveNavBar extends StatelessWidget {
+  const ResponsiveNavBar({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MediaQuery.of(context).size.width > 1200
@@ -30,7 +34,7 @@ class ResponsiveNavBar extends StatelessWidget {
               NavBarItem("Find Tutors", () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => HomePage()),
+                  MaterialPageRoute(builder: (context) => const HomePage()),
                 );
               }),
               NavBarItem("Hire a Tutor", () {
@@ -48,7 +52,7 @@ class ResponsiveNavBar extends StatelessWidget {
               NavBarItem("Login", () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => LoginPage()),
+                  MaterialPageRoute(builder: (context) => const LoginPage()),
                 );
               }),
             ],
@@ -57,50 +61,50 @@ class ResponsiveNavBar extends StatelessWidget {
             itemBuilder: (context) {
               return [
                 PopupMenuItem(
-                  child: Text("Find Tutors"),
+                  child: const Text("Find Tutors"),
                   onTap: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => HomePage()),
+                      MaterialPageRoute(builder: (context) => const HomePage()),
                     );
                   },
                 ),
                 PopupMenuItem(
-                  child: Text("Hire a Tutor"),
+                  child: const Text("Hire a Tutor"),
                   onTap: () {
                     // Handle 'Hire a Tutor' tap
                   },
                 ),
                 PopupMenuItem(
-                  child: Text("Become Tutor"),
+                  child: const Text("Become Tutor"),
                   onTap: () {
                     // Handle 'Become Tutor' tap
                   },
                 ),
                 PopupMenuItem(
-                  child: Text("Find Students"),
+                  child: const Text("Find Students"),
                   onTap: () {
                     // Handle 'Find Students' tap
                   },
                 ),
                 PopupMenuItem(
-                  child: Text("Share & Get Points"),
+                  child: const Text("Share & Get Points"),
                   onTap: () {
                     // Handle 'Share & Get Points' tap
                   },
                 ),
                 PopupMenuItem(
-                  child: Text("Login"),
+                  child: const Text("Login"),
                   onTap: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => LoginPage()),
+                      MaterialPageRoute(builder: (context) => const LoginPage()),
                     );
                   },
                 ),
               ];
             },
-            icon: Icon(Icons.menu),
+            icon: const Icon(Icons.menu),
           );
   }
 }
@@ -109,7 +113,7 @@ class NavBarItem extends StatelessWidget {
   final String title;
   final VoidCallback onTap;
 
-  NavBarItem(this.title, this.onTap);
+  const NavBarItem(this.title, this.onTap, {super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -119,7 +123,7 @@ class NavBarItem extends StatelessWidget {
         padding: const EdgeInsets.all(8.0),
         child: Text(
           title,
-          style: TextStyle(
+          style: const TextStyle(
             fontSize: 20,
             fontWeight: FontWeight.w700,
           ),
@@ -133,7 +137,7 @@ class NavBarItemWithUnderline extends StatelessWidget {
   final String title;
   final VoidCallback onTap;
 
-  NavBarItemWithUnderline(this.title, this.onTap);
+  const NavBarItemWithUnderline(this.title, this.onTap, {super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -145,7 +149,7 @@ class NavBarItemWithUnderline extends StatelessWidget {
           children: [
             Text(
               title,
-              style: TextStyle(
+              style: const TextStyle(
                 fontSize: 20,
                 fontWeight: FontWeight.w700,
               ),

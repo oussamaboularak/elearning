@@ -20,7 +20,7 @@ class _Quize1State extends State<Quize1> {
       child: SingleChildScrollView(
         child: Column(
           children: [
-            Navbar(),
+            const Navbar(),
             Stack(
               children: [
                 Visibility(
@@ -35,14 +35,14 @@ class _Quize1State extends State<Quize1> {
                   ),
                 ),
                 Container(
-                  width: 620,
+                  width: 720,
                   alignment: Alignment.topLeft,
                   child: Padding(
                     padding: const EdgeInsets.all(20.0),
                     child: Column(
                       mainAxisSize: MainAxisSize.min,
                       children: [
-                        Text(
+                        const Text(
                           'Are you Student/Parent?',
                           style: TextStyle(
                             color: Colors.black,
@@ -51,7 +51,7 @@ class _Quize1State extends State<Quize1> {
                             fontWeight: FontWeight.w700,
                           ),
                         ),
-                        SizedBox(height: 20),
+                        const SizedBox(height: 20),
                         Center(
                           child: Column(
                             children: [
@@ -202,7 +202,7 @@ class _Quize1State extends State<Quize1> {
                                         context,
                                         MaterialPageRoute(
                                           builder: (BuildContext context) =>
-                                              Quize2(),
+                                              const Quize2(),
                                         ),
                                       );
                                       print('Next clicked!');

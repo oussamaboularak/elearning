@@ -1,19 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:innotech/screens/forms/form7.dart';
 import 'package:innotech/widget/navbar.dart';
 
 import '../../widget/HoverContainer2.dart';
-import 'form5.dart';
+import 'form2.dart';
 
-class Quize4 extends StatefulWidget {
-  const Quize4({super.key});
+class Quize6 extends StatefulWidget {
+  const Quize6({super.key});
 
   @override
-  State<Quize4> createState() => _Quize4State();
+  State<Quize6> createState() => _Quize6State();
 }
 
 int _selectedOption = 0; // 0 for none, 1 for Student, 2 for Parent
 
-class _Quize4State extends State<Quize4> {
+class _Quize6State extends State<Quize6> {
   @override
   Widget build(BuildContext context) {
     return Material(
@@ -28,10 +29,9 @@ class _Quize4State extends State<Quize4> {
                   child: Container(
                     alignment: Alignment.topRight,
                     child: Image.network(
-                      "images/hero3.png",
+                      "images/hero5.png",
                       fit: BoxFit.cover,
-                      height: 400,
-                      width: 600,
+                      height: 500,
                     ),
                   ),
                 ),
@@ -44,7 +44,7 @@ class _Quize4State extends State<Quize4> {
                       mainAxisSize: MainAxisSize.min,
                       children: [
                         const Text(
-                          'What curriculum do you follow?',
+                          'Subjects Needed',
                           style: TextStyle(
                             color: Colors.black,
                             fontSize: 24,
@@ -53,6 +53,7 @@ class _Quize4State extends State<Quize4> {
                           ),
                         ),
                         const SizedBox(height: 20),
+
                         Center(
                           child: Column(
                             children: [
@@ -68,7 +69,7 @@ class _Quize4State extends State<Quize4> {
                                       duration:
                                           const Duration(milliseconds: 200),
                                       width: 200,
-                                      height: 70,
+                                      height: 57,
                                       decoration: BoxDecoration(
                                         gradient: _selectedOption == 1
                                             ? const LinearGradient(
@@ -105,12 +106,12 @@ class _Quize4State extends State<Quize4> {
                                       ),
                                       child: Center(
                                         child: Text(
-                                          'American Curriculum (AP)',
+                                          'Mathematics',
                                           style: TextStyle(
                                             color: _selectedOption == 1
                                                 ? Colors.black
                                                 : Colors.grey,
-                                            fontSize: 16,
+                                            fontSize: 20,
                                             fontFamily: 'Comic Neue',
                                             fontWeight: FontWeight.w700,
                                           ),
@@ -130,8 +131,8 @@ class _Quize4State extends State<Quize4> {
                                     child: AnimatedContainer(
                                       duration:
                                           const Duration(milliseconds: 200),
-                                      width: 180,
-                                      height: 70,
+                                      width: 200,
+                                      height: 57,
                                       decoration: BoxDecoration(
                                         gradient: _selectedOption == 2
                                             ? const LinearGradient(
@@ -168,12 +169,12 @@ class _Quize4State extends State<Quize4> {
                                       ),
                                       child: Center(
                                         child: Text(
-                                          'British & American Curriculum (O-Level/ A-Level/AP)',
+                                          'Physics',
                                           style: TextStyle(
                                             color: _selectedOption == 2
                                                 ? Colors.black
                                                 : Colors.grey,
-                                            fontSize: 16,
+                                            fontSize: 20,
                                             fontFamily: 'Comic Neue',
                                             fontWeight: FontWeight.w700,
                                           ),
@@ -194,7 +195,7 @@ class _Quize4State extends State<Quize4> {
                                       duration:
                                           const Duration(milliseconds: 200),
                                       width: 200,
-                                      height: 70,
+                                      height: 57,
                                       decoration: BoxDecoration(
                                         gradient: _selectedOption == 3
                                             ? const LinearGradient(
@@ -231,12 +232,12 @@ class _Quize4State extends State<Quize4> {
                                       ),
                                       child: Center(
                                         child: Text(
-                                          'British & International Curriculum (O-Level/ A-Level/IGCSE)',
+                                          'Chemistry',
                                           style: TextStyle(
                                             color: _selectedOption == 3
                                                 ? Colors.black
                                                 : Colors.grey,
-                                            fontSize: 16,
+                                            fontSize: 20,
                                             fontFamily: 'Comic Neue',
                                             fontWeight: FontWeight.w700,
                                           ),
@@ -262,7 +263,7 @@ class _Quize4State extends State<Quize4> {
                                       duration:
                                           const Duration(milliseconds: 200),
                                       width: 200,
-                                      height: 60,
+                                      height: 57,
                                       decoration: BoxDecoration(
                                         gradient: _selectedOption == 4
                                             ? const LinearGradient(
@@ -299,12 +300,12 @@ class _Quize4State extends State<Quize4> {
                                       ),
                                       child: Center(
                                         child: Text(
-                                          'British Curriculum (O-Level / A-Level)',
+                                          'Biology',
                                           style: TextStyle(
                                             color: _selectedOption == 4
                                                 ? Colors.black
                                                 : Colors.grey,
-                                            fontSize: 16,
+                                            fontSize: 20,
                                             fontFamily: 'Comic Neue',
                                             fontWeight: FontWeight.w700,
                                           ),
@@ -324,8 +325,8 @@ class _Quize4State extends State<Quize4> {
                                     child: AnimatedContainer(
                                       duration:
                                           const Duration(milliseconds: 200),
-                                      width: 180,
-                                      height: 60,
+                                      width: 200,
+                                      height: 57,
                                       decoration: BoxDecoration(
                                         gradient: _selectedOption == 5
                                             ? const LinearGradient(
@@ -362,12 +363,12 @@ class _Quize4State extends State<Quize4> {
                                       ),
                                       child: Center(
                                         child: Text(
-                                          'Indian Curriculum (ICSE/CBSE)',
+                                          'Arabic',
                                           style: TextStyle(
                                             color: _selectedOption == 5
                                                 ? Colors.black
                                                 : Colors.grey,
-                                            fontSize: 16,
+                                            fontSize: 20,
                                             fontFamily: 'Comic Neue',
                                             fontWeight: FontWeight.w700,
                                           ),
@@ -387,8 +388,8 @@ class _Quize4State extends State<Quize4> {
                                     child: AnimatedContainer(
                                       duration:
                                           const Duration(milliseconds: 200),
-                                      width: 180,
-                                      height: 60,
+                                      width: 200,
+                                      height: 57,
                                       decoration: BoxDecoration(
                                         gradient: _selectedOption == 6
                                             ? const LinearGradient(
@@ -425,12 +426,12 @@ class _Quize4State extends State<Quize4> {
                                       ),
                                       child: Center(
                                         child: Text(
-                                          'International Baccalaureate (IB)',
+                                          'English',
                                           style: TextStyle(
                                             color: _selectedOption == 6
                                                 ? Colors.black
                                                 : Colors.grey,
-                                            fontSize: 16,
+                                            fontSize: 20,
                                             fontFamily: 'Comic Neue',
                                             fontWeight: FontWeight.w700,
                                           ),
@@ -440,6 +441,7 @@ class _Quize4State extends State<Quize4> {
                                   ),
                                 ],
                               ),
+
                               const SizedBox(
                                 height: 20,
                               ), // Adjust as needed
@@ -493,12 +495,12 @@ class _Quize4State extends State<Quize4> {
                                       ),
                                       child: Center(
                                         child: Text(
-                                          'International Curruculum (IGCSE)',
+                                          'French',
                                           style: TextStyle(
                                             color: _selectedOption == 7
                                                 ? Colors.black
                                                 : Colors.grey,
-                                            fontSize: 16,
+                                            fontSize: 20,
                                             fontFamily: 'Comic Neue',
                                             fontWeight: FontWeight.w700,
                                           ),
@@ -556,12 +558,12 @@ class _Quize4State extends State<Quize4> {
                                       ),
                                       child: Center(
                                         child: Text(
-                                          'Canadian Curriculum',
+                                          'Business',
                                           style: TextStyle(
                                             color: _selectedOption == 8
                                                 ? Colors.black
                                                 : Colors.grey,
-                                            fontSize: 16,
+                                            fontSize: 20,
                                             fontFamily: 'Comic Neue',
                                             fontWeight: FontWeight.w700,
                                           ),
@@ -619,12 +621,12 @@ class _Quize4State extends State<Quize4> {
                                       ),
                                       child: Center(
                                         child: Text(
-                                          'Arabic and Islamic Curriculum',
+                                          'Islamic Education',
                                           style: TextStyle(
                                             color: _selectedOption == 9
                                                 ? Colors.black
                                                 : Colors.grey,
-                                            fontSize: 16,
+                                            fontSize: 20,
                                             fontFamily: 'Comic Neue',
                                             fontWeight: FontWeight.w700,
                                           ),
@@ -634,6 +636,7 @@ class _Quize4State extends State<Quize4> {
                                   ),
                                 ],
                               ),
+
                               const SizedBox(height: 20), // Adjust as needed
 
                               Row(children: [
@@ -688,7 +691,7 @@ class _Quize4State extends State<Quize4> {
                                           color: _selectedOption == 10
                                               ? Colors.black
                                               : Colors.grey,
-                                          fontSize: 16,
+                                          fontSize: 20,
                                           fontFamily: 'Comic Neue',
                                           fontWeight: FontWeight.w700,
                                         ),
@@ -700,7 +703,6 @@ class _Quize4State extends State<Quize4> {
                             ],
                           ),
                         ),
-
                         const SizedBox(height: 20), // Adjust as needed
                         Center(
                           child: Column(
@@ -724,7 +726,7 @@ class _Quize4State extends State<Quize4> {
                                         context,
                                         MaterialPageRoute(
                                           builder: (BuildContext context) =>
-                                              const Quize5(),
+                                              const Quize7(),
                                         ),
                                       );
                                       print('Next clicked!');
