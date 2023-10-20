@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:innotech/screens/loginpage.dart';
 import 'package:innotech/widget/navbar.dart';
 
-import '../widget/constants.dart';
+import '../widget/HoverContainer2.dart';
 
 class SignUpPage extends StatefulWidget {
   const SignUpPage({super.key});
@@ -17,12 +18,6 @@ const List<String> list = <String>[
   'Only Phone Number',
   'All',
   'Only Email'
-];
-
-const List<String> category = <String>[
-  'person',
-  'teacher',
-  'institu',
 ];
 
 class _SignUpPageState extends State<SignUpPage> {
@@ -62,22 +57,6 @@ class _SignUpPageState extends State<SignUpPage> {
                                 fontWeight: FontWeight.w700,
                               )),
                           const SizedBox(height: 10),
-
-                          DropdownMenu<String>(
-                            initialSelection: "Show you contact ",
-                            onSelected: (String? value) {
-                              // This is called when the user selects an item.
-                              setState(() {
-                                dropdownValue = value!;
-                              });
-                            },
-                            dropdownMenuEntries: category
-                                .map<DropdownMenuEntry<String>>((String value) {
-                              return DropdownMenuEntry<String>(
-                                  value: value, label: value);
-                            }).toList(),
-                          ),
-                          const SizedBox(height: 20),
 
                           // Username Field
                           const TextField(
@@ -147,7 +126,8 @@ class _SignUpPageState extends State<SignUpPage> {
                             child: ElevatedButton(
                               onPressed: () => print("Sign Up button pressed"),
                               style: ElevatedButton.styleFrom(
-                                foregroundColor: Colors.white, backgroundColor: Colors.transparent,
+                                foregroundColor: Colors.white,
+                                backgroundColor: Colors.transparent,
                                 shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(15),
                                 ),
@@ -157,6 +137,40 @@ class _SignUpPageState extends State<SignUpPage> {
                           ),
 
                           const SizedBox(height: 20),
+
+                          Center(
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    HoverContainer2(
+                                      text: 'Previous',
+                                      onTap: () {
+                                        Navigator.pop(context);
+                                        print('Previous clicked!');
+                                      },
+                                    ),
+                                    const SizedBox(width: 150),
+                                    HoverContainer2(
+                                      text: 'Next',
+                                      onTap: () {
+                                        Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                            builder: (BuildContext context) =>
+                                                const LoginPage(),
+                                          ),
+                                        );
+                                        print('Next clicked!');
+                                      },
+                                    ),
+                                  ],
+                                ),
+                              ],
+                            ),
+                          ),
                         ],
                       ),
                     ),

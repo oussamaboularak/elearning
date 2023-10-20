@@ -1,20 +1,20 @@
 import 'package:flutter/material.dart';
-import 'package:innotech/screens/forms/form10.dart';
+import 'package:innotech/screens/forms/form12.dart';
 import 'package:innotech/widget/navbar.dart';
 
 import '../../widget/HoverContainer2.dart';
 import 'form2.dart';
 
-class Quize9 extends StatefulWidget {
-  const Quize9({super.key});
+class Quize11 extends StatefulWidget {
+  const Quize11({super.key});
 
   @override
-  State<Quize9> createState() => _Quize9State();
+  State<Quize11> createState() => _Quize11State();
 }
 
 int _selectedOption = 0; // 0 for none, 1 for Student, 2 for Parent
 
-class _Quize9State extends State<Quize9> {
+class _Quize11State extends State<Quize11> {
   @override
   Widget build(BuildContext context) {
     return Material(
@@ -29,7 +29,7 @@ class _Quize9State extends State<Quize9> {
                   child: Container(
                     alignment: Alignment.topRight,
                     child: Image.network(
-                      "images/hero8.png",
+                      "images/pref.png",
                       fit: BoxFit.cover,
                       height: 500,
                     ),
@@ -44,7 +44,7 @@ class _Quize9State extends State<Quize9> {
                       mainAxisSize: MainAxisSize.min,
                       children: [
                         const Text(
-                          'Subjects Needed',
+                          'Which type do you prefer?',
                           style: TextStyle(
                             color: Colors.black,
                             fontSize: 24,
@@ -105,7 +105,7 @@ class _Quize9State extends State<Quize9> {
                                       ),
                                       child: Center(
                                         child: Text(
-                                          'IELTS',
+                                          'Private Tutor',
                                           style: TextStyle(
                                             color: _selectedOption == 1
                                                 ? Colors.black
@@ -168,7 +168,7 @@ class _Quize9State extends State<Quize9> {
                                       ),
                                       child: Center(
                                         child: Text(
-                                          'TOFEL',
+                                          'Online Tutor',
                                           style: TextStyle(
                                             color: _selectedOption == 2
                                                 ? Colors.black
@@ -231,7 +231,7 @@ class _Quize9State extends State<Quize9> {
                                       ),
                                       child: Center(
                                         child: Text(
-                                          'DELF',
+                                          'Tuition Center',
                                           style: TextStyle(
                                             color: _selectedOption == 3
                                                 ? Colors.black
@@ -299,7 +299,7 @@ class _Quize9State extends State<Quize9> {
                                       ),
                                       child: Center(
                                         child: Text(
-                                          'PMP',
+                                          'Group Class',
                                           style: TextStyle(
                                             color: _selectedOption == 4
                                                 ? Colors.black
@@ -362,7 +362,7 @@ class _Quize9State extends State<Quize9> {
                                       ),
                                       child: Center(
                                         child: Text(
-                                          'IGCSE/GCSE',
+                                          'Activity Center',
                                           style: TextStyle(
                                             color: _selectedOption == 5
                                                 ? Colors.black
@@ -425,7 +425,7 @@ class _Quize9State extends State<Quize9> {
                                       ),
                                       child: Center(
                                         child: Text(
-                                          'IP BIOLOGY',
+                                          'Training Institute',
                                           style: TextStyle(
                                             color: _selectedOption == 6
                                                 ? Colors.black
@@ -440,402 +440,15 @@ class _Quize9State extends State<Quize9> {
                                   ),
                                 ],
                               ),
-
                               const SizedBox(
                                 height: 20,
-                              ),
-
-                              Row(
-                                children: [
-                                  GestureDetector(
-                                    onTap: () {
-                                      setState(() {
-                                        _selectedOption = 7;
-                                      });
-                                    },
-                                    child: AnimatedContainer(
-                                      duration:
-                                          const Duration(milliseconds: 200),
-                                      width: 200,
-                                      height: 57,
-                                      decoration: BoxDecoration(
-                                        gradient: _selectedOption == 7
-                                            ? const LinearGradient(
-                                                begin: Alignment(1.00, -0.03),
-                                                end: Alignment(-1, 0.03),
-                                                colors: [
-                                                  Color(0xFFF8BC29),
-                                                  Color(0xFF59FFAF)
-                                                ],
-                                              )
-                                            : const LinearGradient(
-                                                // Use white color for the non-selected state
-                                                begin: Alignment(1.00, -0.03),
-                                                end: Alignment(-1, 0.03),
-                                                colors: [
-                                                  Colors.white,
-                                                  Colors.white
-                                                ],
-                                              ),
-                                        borderRadius: BorderRadius.circular(13),
-                                        border: Border.all(
-                                          width: 0.50,
-                                          color: const Color(0xFFE0E0E0),
-                                        ),
-                                        boxShadow: [
-                                          if (_selectedOption == 7)
-                                            const BoxShadow(
-                                              color: Color(0x3F000000),
-                                              blurRadius: 4,
-                                              offset: Offset(0, 4),
-                                              spreadRadius: 0,
-                                            ),
-                                        ],
-                                      ),
-                                      child: Center(
-                                        child: Text(
-                                          'PTE',
-                                          style: TextStyle(
-                                            color: _selectedOption == 7
-                                                ? Colors.black
-                                                : Colors.grey,
-                                            fontSize: 20,
-                                            fontFamily: 'Comic Neue',
-                                            fontWeight: FontWeight.w700,
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-
-                                  const SizedBox(
-                                      height: 20), // Adjust as needed
-                                  GestureDetector(
-                                    onTap: () {
-                                      setState(() {
-                                        _selectedOption = 8;
-                                      });
-                                    },
-                                    child: AnimatedContainer(
-                                      duration:
-                                          const Duration(milliseconds: 200),
-                                      width: 200,
-                                      height: 57,
-                                      decoration: BoxDecoration(
-                                        gradient: _selectedOption == 8
-                                            ? const LinearGradient(
-                                                begin: Alignment(1.00, -0.03),
-                                                end: Alignment(-1, 0.03),
-                                                colors: [
-                                                  Color(0xFFF8BC29),
-                                                  Color(0xFF59FFAF)
-                                                ],
-                                              )
-                                            : const LinearGradient(
-                                                // Use white color for the non-selected state
-                                                begin: Alignment(1.00, -0.03),
-                                                end: Alignment(-1, 0.03),
-                                                colors: [
-                                                  Colors.white,
-                                                  Colors.white
-                                                ],
-                                              ),
-                                        borderRadius: BorderRadius.circular(13),
-                                        border: Border.all(
-                                          width: 0.50,
-                                          color: const Color(0xFFE0E0E0),
-                                        ),
-                                        boxShadow: [
-                                          if (_selectedOption == 8)
-                                            const BoxShadow(
-                                              color: Color(0x3F000000),
-                                              blurRadius: 4,
-                                              offset: Offset(0, 4),
-                                              spreadRadius: 0,
-                                            ),
-                                        ],
-                                      ),
-                                      child: Center(
-                                        child: Text(
-                                          'Maths',
-                                          style: TextStyle(
-                                            color: _selectedOption == 8
-                                                ? Colors.black
-                                                : Colors.grey,
-                                            fontSize: 20,
-                                            fontFamily: 'Comic Neue',
-                                            fontWeight: FontWeight.w700,
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-
-                                  const SizedBox(
-                                      height: 20), // Adjust as needed
-                                  GestureDetector(
-                                    onTap: () {
-                                      setState(() {
-                                        _selectedOption = 9;
-                                      });
-                                    },
-                                    child: AnimatedContainer(
-                                      duration:
-                                          const Duration(milliseconds: 200),
-                                      width: 200,
-                                      height: 57,
-                                      decoration: BoxDecoration(
-                                        gradient: _selectedOption == 9
-                                            ? const LinearGradient(
-                                                begin: Alignment(1.00, -0.03),
-                                                end: Alignment(-1, 0.03),
-                                                colors: [
-                                                  Color(0xFFF8BC29),
-                                                  Color(0xFF59FFAF)
-                                                ],
-                                              )
-                                            : const LinearGradient(
-                                                // Use white color for the non-selected state
-                                                begin: Alignment(1.00, -0.03),
-                                                end: Alignment(-1, 0.03),
-                                                colors: [
-                                                  Colors.white,
-                                                  Colors.white
-                                                ],
-                                              ),
-                                        borderRadius: BorderRadius.circular(13),
-                                        border: Border.all(
-                                          width: 0.50,
-                                          color: const Color(0xFFE0E0E0),
-                                        ),
-                                        boxShadow: [
-                                          if (_selectedOption == 9)
-                                            const BoxShadow(
-                                              color: Color(0x3F000000),
-                                              blurRadius: 4,
-                                              offset: Offset(0, 4),
-                                              spreadRadius: 0,
-                                            ),
-                                        ],
-                                      ),
-                                      child: Center(
-                                        child: Text(
-                                          'Teachers Training',
-                                          style: TextStyle(
-                                            color: _selectedOption == 9
-                                                ? Colors.black
-                                                : Colors.grey,
-                                            fontSize: 20,
-                                            fontFamily: 'Comic Neue',
-                                            fontWeight: FontWeight.w700,
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                              const SizedBox(
-                                height: 20,
-                              ),
-                              Row(
-                                children: [
-                                  GestureDetector(
-                                    onTap: () {
-                                      setState(() {
-                                        _selectedOption = 10;
-                                      });
-                                    },
-                                    child: AnimatedContainer(
-                                      duration:
-                                          const Duration(milliseconds: 200),
-                                      width: 200,
-                                      height: 57,
-                                      decoration: BoxDecoration(
-                                        gradient: _selectedOption == 10
-                                            ? const LinearGradient(
-                                                begin: Alignment(1.00, -0.03),
-                                                end: Alignment(-1, 0.03),
-                                                colors: [
-                                                  Color(0xFFF8BC29),
-                                                  Color(0xFF59FFAF)
-                                                ],
-                                              )
-                                            : const LinearGradient(
-                                                // Use white color for the non-selected state
-                                                begin: Alignment(1.00, -0.03),
-                                                end: Alignment(-1, 0.03),
-                                                colors: [
-                                                  Colors.white,
-                                                  Colors.white
-                                                ],
-                                              ),
-                                        borderRadius: BorderRadius.circular(13),
-                                        border: Border.all(
-                                          width: 0.50,
-                                          color: const Color(0xFFE0E0E0),
-                                        ),
-                                        boxShadow: [
-                                          if (_selectedOption == 10)
-                                            const BoxShadow(
-                                              color: Color(0x3F000000),
-                                              blurRadius: 4,
-                                              offset: Offset(0, 4),
-                                              spreadRadius: 0,
-                                            ),
-                                        ],
-                                      ),
-                                      child: Center(
-                                        child: Text(
-                                          'Duolingo English Test (DET)',
-                                          style: TextStyle(
-                                            color: _selectedOption == 10
-                                                ? Colors.black
-                                                : Colors.grey,
-                                            fontSize: 20,
-                                            fontFamily: 'Comic Neue',
-                                            fontWeight: FontWeight.w700,
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-
-                                  const SizedBox(
-                                      height: 20), // Adjust as needed
-                                  GestureDetector(
-                                    onTap: () {
-                                      setState(() {
-                                        _selectedOption = 11;
-                                      });
-                                    },
-                                    child: AnimatedContainer(
-                                      duration:
-                                          const Duration(milliseconds: 200),
-                                      width: 200,
-                                      height: 57,
-                                      decoration: BoxDecoration(
-                                        gradient: _selectedOption == 11
-                                            ? const LinearGradient(
-                                                begin: Alignment(1.00, -0.03),
-                                                end: Alignment(-1, 0.03),
-                                                colors: [
-                                                  Color(0xFFF8BC29),
-                                                  Color(0xFF59FFAF)
-                                                ],
-                                              )
-                                            : const LinearGradient(
-                                                // Use white color for the non-selected state
-                                                begin: Alignment(1.00, -0.03),
-                                                end: Alignment(-1, 0.03),
-                                                colors: [
-                                                  Colors.white,
-                                                  Colors.white
-                                                ],
-                                              ),
-                                        borderRadius: BorderRadius.circular(13),
-                                        border: Border.all(
-                                          width: 0.50,
-                                          color: const Color(0xFFE0E0E0),
-                                        ),
-                                        boxShadow: [
-                                          if (_selectedOption == 11)
-                                            const BoxShadow(
-                                              color: Color(0x3F000000),
-                                              blurRadius: 4,
-                                              offset: Offset(0, 4),
-                                              spreadRadius: 0,
-                                            ),
-                                        ],
-                                      ),
-                                      child: Center(
-                                        child: Text(
-                                          'TOEIC',
-                                          style: TextStyle(
-                                            color: _selectedOption == 11
-                                                ? Colors.black
-                                                : Colors.grey,
-                                            fontSize: 20,
-                                            fontFamily: 'Comic Neue',
-                                            fontWeight: FontWeight.w700,
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-
-                                  const SizedBox(
-                                      height: 20), // Adjust as needed
-                                  GestureDetector(
-                                    onTap: () {
-                                      setState(() {
-                                        _selectedOption = 12;
-                                      });
-                                    },
-                                    child: AnimatedContainer(
-                                      duration:
-                                          const Duration(milliseconds: 200),
-                                      width: 200,
-                                      height: 57,
-                                      decoration: BoxDecoration(
-                                        gradient: _selectedOption == 12
-                                            ? const LinearGradient(
-                                                begin: Alignment(1.00, -0.03),
-                                                end: Alignment(-1, 0.03),
-                                                colors: [
-                                                  Color(0xFFF8BC29),
-                                                  Color(0xFF59FFAF)
-                                                ],
-                                              )
-                                            : const LinearGradient(
-                                                // Use white color for the non-selected state
-                                                begin: Alignment(1.00, -0.03),
-                                                end: Alignment(-1, 0.03),
-                                                colors: [
-                                                  Colors.white,
-                                                  Colors.white
-                                                ],
-                                              ),
-                                        borderRadius: BorderRadius.circular(13),
-                                        border: Border.all(
-                                          width: 0.50,
-                                          color: const Color(0xFFE0E0E0),
-                                        ),
-                                        boxShadow: [
-                                          if (_selectedOption == 12)
-                                            const BoxShadow(
-                                              color: Color(0x3F000000),
-                                              blurRadius: 4,
-                                              offset: Offset(0, 4),
-                                              spreadRadius: 0,
-                                            ),
-                                        ],
-                                      ),
-                                      child: Center(
-                                        child: Text(
-                                          'TOEFL',
-                                          style: TextStyle(
-                                            color: _selectedOption == 12
-                                                ? Colors.black
-                                                : Colors.grey,
-                                            fontSize: 20,
-                                            fontFamily: 'Comic Neue',
-                                            fontWeight: FontWeight.w700,
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-
-                              const SizedBox(height: 20),
+                              ), // Adjust as needed
 
                               Row(children: [
                                 GestureDetector(
                                   onTap: () {
                                     setState(() {
-                                      _selectedOption = 13;
+                                      _selectedOption = 7;
                                     });
                                   },
                                   child: AnimatedContainer(
@@ -843,7 +456,7 @@ class _Quize9State extends State<Quize9> {
                                     width: 600,
                                     height: 57,
                                     decoration: BoxDecoration(
-                                      gradient: _selectedOption == 13
+                                      gradient: _selectedOption == 7
                                           ? const LinearGradient(
                                               begin: Alignment(1.00, -0.03),
                                               end: Alignment(-1, 0.03),
@@ -867,7 +480,7 @@ class _Quize9State extends State<Quize9> {
                                         color: const Color(0xFFE0E0E0),
                                       ),
                                       boxShadow: [
-                                        if (_selectedOption == 13)
+                                        if (_selectedOption == 7)
                                           const BoxShadow(
                                             color: Color(0x3F000000),
                                             blurRadius: 4,
@@ -880,7 +493,7 @@ class _Quize9State extends State<Quize9> {
                                       child: Text(
                                         'Other',
                                         style: TextStyle(
-                                          color: _selectedOption == 13
+                                          color: _selectedOption == 7
                                               ? Colors.black
                                               : Colors.grey,
                                           fontSize: 20,
@@ -895,7 +508,6 @@ class _Quize9State extends State<Quize9> {
                             ],
                           ),
                         ),
-
                         const SizedBox(height: 20), // Adjust as needed
                         Center(
                           child: Column(
@@ -919,7 +531,7 @@ class _Quize9State extends State<Quize9> {
                                         context,
                                         MaterialPageRoute(
                                           builder: (BuildContext context) =>
-                                              const Quize10(),
+                                              const Quize12(),
                                         ),
                                       );
                                       print('Next clicked!');

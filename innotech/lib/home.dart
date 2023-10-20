@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:innotech/screens/forms/form1.dart';
 import 'package:innotech/widget/constants.dart';
 import 'package:innotech/widget/navbar.dart';
+import 'package:innotech/widget/searchbar.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -68,7 +69,8 @@ class _HomePageState extends State<HomePage> {
                               );
                             },
                             style: ElevatedButton.styleFrom(
-                              foregroundColor: Colors.white, backgroundColor: Colors.transparent,
+                              foregroundColor: Colors.white,
+                              backgroundColor: Colors.transparent,
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(40),
                               ),
@@ -101,6 +103,9 @@ class _HomePageState extends State<HomePage> {
                 ),
               ],
             ),
+            SizedBox(height: 20),
+            SearchF(),
+            SizedBox(height: 50)
           ],
         ),
       ),

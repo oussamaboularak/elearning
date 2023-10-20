@@ -28,12 +28,15 @@ class Navbar extends StatelessWidget {
                     height: 60,
                     fit: BoxFit.cover,
                   ),
+                  Image.network("images/Vector 2.png"),
+
                   if (screenWidth > 768)
                     InkWell(
                       onTap: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => const HomePage()),
+                          MaterialPageRoute(
+                              builder: (context) => const HomePage()),
                         );
                       },
                       child: Padding(
@@ -109,8 +112,8 @@ class Navbar extends StatelessWidget {
                             color: Colors.green,
                             borderRadius: BorderRadius.circular(8.0),
                           ),
-                          padding:
-                              const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                          padding: const EdgeInsets.symmetric(
+                              horizontal: 16, vertical: 8),
                           child: Text(
                             "Find Students",
                             style: TextStyle(
@@ -133,8 +136,8 @@ class Navbar extends StatelessWidget {
                             color: Colors.green,
                             borderRadius: BorderRadius.circular(8.0),
                           ),
-                          padding:
-                              const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                          padding: const EdgeInsets.symmetric(
+                              horizontal: 16, vertical: 8),
                           child: Text(
                             "Share & Get Points",
                             style: TextStyle(
@@ -151,7 +154,8 @@ class Navbar extends StatelessWidget {
                         // Navigate to another screen when clicked
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => const LoginPage()),
+                          MaterialPageRoute(
+                              builder: (context) => const LoginPage()),
                         );
                       },
                       child: Padding(
