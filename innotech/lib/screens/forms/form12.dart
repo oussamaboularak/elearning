@@ -3,7 +3,6 @@ import 'package:innotech/screens/signup.dart';
 import 'package:innotech/widget/navbar.dart';
 
 import '../../widget/HoverContainer2.dart';
-import 'form2.dart';
 
 class Quize12 extends StatefulWidget {
   const Quize12({super.key});
@@ -64,7 +63,7 @@ class _Quize12State extends State<Quize12> {
                                   color: Colors.white,
                                   borderRadius: BorderRadius.circular(
                                       15), // Apply rounded corners
-                                  boxShadow: [
+                                  boxShadow: const [
                                     BoxShadow(
                                       color: Colors
                                           .grey, // Change the shadow color
@@ -74,7 +73,7 @@ class _Quize12State extends State<Quize12> {
                                     ),
                                   ],
                                 ),
-                                child: TextField(
+                                child: const TextField(
                                   decoration: InputDecoration(
                                     labelText: 'Entre you message',
                                     border: InputBorder

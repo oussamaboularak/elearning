@@ -17,7 +17,7 @@ class SearchF extends StatelessWidget {
           decoration: BoxDecoration(
             color: const Color.fromARGB(255, 223, 226, 228),
             borderRadius: BorderRadius.circular(25),
-            boxShadow: [
+            boxShadow: const [
               BoxShadow(
                 color: Colors.grey,
                 spreadRadius: 2,
@@ -36,7 +36,7 @@ class SearchF extends StatelessWidget {
                     borderRadius: BorderRadius.circular(15),
                   ),
                   child: DropdownButtonFormField<String>(
-                    items: [
+                    items: const [
                       DropdownMenuItem<String>(
                         value: 'option1',
                         child: Text('Option 1'),
@@ -53,7 +53,7 @@ class SearchF extends StatelessWidget {
                     onChanged: (value) {
                       print(value);
                     },
-                    hint: Text('I want to teach'),
+                    hint: const Text('I want to teach'),
                   ),
                 ),
               ),
@@ -68,7 +68,7 @@ class SearchF extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text(
+                      const Text(
                         'Curriculum',
                         style: TextStyle(
                           fontSize: 16,
@@ -77,7 +77,7 @@ class SearchF extends StatelessWidget {
                         ),
                       ),
                       DropdownButtonFormField<String>(
-                        items: [
+                        items: const [
                           DropdownMenuItem<String>(
                             value: '1',
                             child: Text('Option 1'),
@@ -94,7 +94,7 @@ class SearchF extends StatelessWidget {
                         onChanged: (value) {
                           print(value);
                         },
-                        hint: Text(
+                        hint: const Text(
                           'British',
                           style: TextStyle(
                             fontSize: 12,
@@ -118,7 +118,7 @@ class SearchF extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text(
+                      const Text(
                         'Online/Offline',
                         style: TextStyle(
                           fontSize: 16,
@@ -127,7 +127,7 @@ class SearchF extends StatelessWidget {
                         ),
                       ),
                       DropdownButtonFormField<String>(
-                        items: [
+                        items: const [
                           DropdownMenuItem<String>(
                             value: '1',
                             child: Text('Option 1'),
@@ -144,7 +144,7 @@ class SearchF extends StatelessWidget {
                         onChanged: (value) {
                           print(value);
                         },
-                        hint: Text(
+                        hint: const Text(
                           'British',
                           style: TextStyle(
                             fontSize: 12,
@@ -168,7 +168,7 @@ class SearchF extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text(
+                      const Text(
                         'Localisation',
                         style: TextStyle(
                           fontSize: 16,
@@ -177,7 +177,7 @@ class SearchF extends StatelessWidget {
                         ),
                       ),
                       DropdownButtonFormField<String>(
-                        items: [
+                        items: const [
                           DropdownMenuItem<String>(
                             value: '1',
                             child: Text('Option 1'),
@@ -194,7 +194,7 @@ class SearchF extends StatelessWidget {
                         onChanged: (value) {
                           print(value);
                         },
-                        hint: Text(
+                        hint: const Text(
                           'British',
                           style: TextStyle(
                             fontSize: 12,
@@ -213,14 +213,14 @@ class SearchF extends StatelessWidget {
                   onPressed: () {
                     // Handle the search button click
                   },
-                  child: Text(
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.blue,
+                  ),
+                  child: const Text(
                     'Y',
                     style: TextStyle(
                       color: Colors.white,
                     ),
-                  ),
-                  style: ElevatedButton.styleFrom(
-                    primary: Colors.blue,
                   ),
                 ),
               ),
@@ -230,20 +230,20 @@ class SearchF extends StatelessWidget {
       } else {
         // For mobile view, display a drop-down menu
         return AppBar(
-          title: Text('Search'),
+          title: const Text('Search'),
           actions: [
             PopupMenuButton<String>(
               itemBuilder: (BuildContext context) {
                 return [
-                  PopupMenuItem<String>(
+                  const PopupMenuItem<String>(
                     value: 'Option 1',
                     child: Text('Option 1'),
                   ),
-                  PopupMenuItem<String>(
+                  const PopupMenuItem<String>(
                     value: 'Option 2',
                     child: Text('Option 2'),
                   ),
-                  PopupMenuItem<String>(
+                  const PopupMenuItem<String>(
                     value: 'Option 3',
                     child: Text('Option 3'),
                   ),
@@ -253,7 +253,7 @@ class SearchF extends StatelessWidget {
                 // Handle the selected option
                 print(value);
               },
-              icon: Icon(Icons.filter_list),
+              icon: const Icon(Icons.filter_list),
             ),
           ],
         );

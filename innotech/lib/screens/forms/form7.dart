@@ -3,7 +3,6 @@ import 'package:innotech/screens/forms/form8.dart';
 import 'package:innotech/widget/navbar.dart';
 
 import '../../widget/HoverContainer2.dart';
-import 'form2.dart';
 
 class Quize7 extends StatefulWidget {
   const Quize7({super.key});

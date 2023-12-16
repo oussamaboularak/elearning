@@ -18,7 +18,7 @@ class _HomePageState extends State<HomePage> {
       child: SingleChildScrollView(
         child: Column(
           children: [
-            const Navbar(),
+            Navbar(),
             Stack(
               children: [
                 Visibility(
@@ -103,9 +103,9 @@ class _HomePageState extends State<HomePage> {
                 ),
               ],
             ),
-            SizedBox(height: 20),
-            SearchF(),
-            SizedBox(height: 50)
+            const SizedBox(height: 20),
+            const SearchF(),
+            const SizedBox(height: 50)
           ],
         ),
       ),
